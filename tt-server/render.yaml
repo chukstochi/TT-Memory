@@ -1,0 +1,36 @@
+# Render Blueprint: Dashboard > New > Blueprint > pick your GitHub repo with this folder.
+services:
+  - type: web
+    name: tt-memory-server
+    runtime: docker
+    plan: starter            # a persistent disk needs a paid instance (about $7/month)
+    healthCheckPath: /health
+    disk:
+      name: tt-data
+      mountPath: /data
+      sizeGB: 1
+    envVars:
+      - key: PAYSTACK_SECRET_KEY
+        sync: false
+      - key: PAYSTACK_PLAN_PERSONAL
+        sync: false
+      - key: PAYSTACK_PLAN_FAMILY
+        sync: false
+      - key: PAYSTACK_PLAN_FAMILY_PLUS
+        sync: false
+      - key: RESEND_API_KEY
+        sync: false
+      - key: MAIL_FROM
+        sync: false
+      - key: R2_ACCOUNT_ID
+        sync: false
+      - key: R2_ACCESS_KEY_ID
+        sync: false
+      - key: R2_SECRET_ACCESS_KEY
+        sync: false
+      - key: R2_BUCKET
+        sync: false
+      - key: ALLOWED_CALLBACK_PREFIXES
+        value: exp://,ttmemory://
+      - key: TRUST_PROXY
+        value: "1"

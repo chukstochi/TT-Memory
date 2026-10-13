@@ -1,0 +1,12 @@
+{
+  "name": "tt-memory-payments",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "description": "Payments server for TT Memory (Paystack)",
+  "engines": { "node": ">=20" },
+  "scripts": {
+    "start": "node server.js",
+    "test": "node --test"
+  }
+}

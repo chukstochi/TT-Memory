@@ -1,0 +1,23 @@
+{
+  "expo": {
+    "name": "TT Memory",
+    "slug": "tt-memory",
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "userInterfaceStyle": "light",
+    "splash": {
+      "backgroundColor": "#100B2B"
+    },
+    "android": {
+      "package": "com.ttmemory.app"
+    },
+    "ios": {
+      "bundleIdentifier": "com.ttmemory.app"
+    },
+    "plugins": [
+      "expo-status-bar",
+      "expo-secure-store",
+      "expo-web-browser"
+    ]
+  }
+}
